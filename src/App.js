@@ -339,50 +339,77 @@ function App({ connectWallet }) {
         )}
         {/* TODO: Design a component to show that yo dude you have no ovens and go make one on Kolibri */}
         {current === STATES.NO_OVEN && (
-          <Flex
-            p={8}
-            borderRadius={"10px"}
-            boxShadow="sm"
-            border={"1px"}
-            borderColor="gray.300"
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            maxW={"container.md"}
-            mx={"auto"}
-          >
-            <Box>
-              <Text fontSize={"xl"} fontWeight={"bold"} color="gray.300">
-                Uh oh, no{" "}
-                <Link
-                  href="https://kolibri.finance"
-                  target={"_blank"}
-                  color="green.500"
-                  fontWeight={"semibold"}
-                >
-                  Kolibri
-                </Link>{" "}
-                Ovens found.
-              </Text>
-              <Text color="gray.300">
-                Please head over to{" "}
-                <Link
-                  href="https://kolibri.finance"
-                  target={"_blank"}
-                  color="green.500"
-                >
-                  Kolibri
-                </Link>{" "}
-                and create an oven.
-              </Text>
-            </Box>
-            <Link href="https://kolibri.finance" target={"_blank"}>
-              <Button colorScheme={"blue"}>Create an Oven</Button>
-            </Link>
-          </Flex>
+          <>
+            <Flex mb="30px">
+              <Button
+                colorScheme="blue"
+                variant="solid"
+                mb="8px"
+                marginRight="4px"
+                borderEndRadius
+              >
+                Long
+              </Button>
+
+              <Tooltip label="Coming Soon !">
+                <Flex>
+                  <Button
+                    colorScheme="blue"
+                    variant="outline"
+                    mb="8px"
+                    disabled
+                    textColor="blue.200"
+                  >
+                    Short
+                  </Button>
+                </Flex>
+              </Tooltip>
+            </Flex>
+            <Flex
+              p={8}
+              borderRadius={"10px"}
+              boxShadow="sm"
+              border={"1px"}
+              borderColor="gray.300"
+              alignItems={"center"}
+              justifyContent={"space-between"}
+              maxW={"container.md"}
+              mx={"auto"}
+            >
+              <Box>
+                <Text fontSize={"xl"} fontWeight={"bold"} color="gray.300">
+                  Uh oh, no{" "}
+                  <Link
+                    href="https://kolibri.finance"
+                    target={"_blank"}
+                    color="green.500"
+                    fontWeight={"semibold"}
+                  >
+                    Kolibri
+                  </Link>{" "}
+                  Ovens found.
+                </Text>
+                <Text color="gray.300">
+                  Please head over to{" "}
+                  <Link
+                    href="https://kolibri.finance"
+                    target={"_blank"}
+                    color="green.500"
+                  >
+                    Kolibri
+                  </Link>{" "}
+                  and create an oven.
+                </Text>
+              </Box>
+              <Link href="https://kolibri.finance" target={"_blank"}>
+                <Button colorScheme={"blue"}>Create an Oven</Button>
+              </Link>
+            </Flex>
+          </>
         )}
         {current === STATES.MULTIPLE_OVENS && (
           <>
-            <Flex mb="20px">
+            <Flex mb="30px">
               <Button
                 colorScheme="blue"
                 variant="solid"
@@ -417,24 +444,26 @@ function App({ connectWallet }) {
         )}
         {current === STATES.CONNECTED && (
           <>
-            <Button
-              colorScheme="blue"
-              variant="solid"
-              mb="8px"
-              marginRight="4px"
-              borderEndRadius
-            >
-              Long
-            </Button>
-            <Button
-              colorScheme="blue"
-              variant="outline"
-              mb="8px"
-              disabled
-              textColor="blue.200"
-            >
-              Short
-            </Button>
+            <Flex mb='30px'>
+              <Button
+                colorScheme="blue"
+                variant="solid"
+                mb="8px"
+                marginRight="4px"
+                borderEndRadius
+              >
+                Long
+              </Button>
+              <Button
+                colorScheme="blue"
+                variant="outline"
+                mb="8px"
+                disabled
+                textColor="blue.200"
+              >
+                Short
+              </Button>
+            </Flex>
 
             <Text
               fontSize="3xl"

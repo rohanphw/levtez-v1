@@ -71,7 +71,7 @@ function Oven({ address, data }) {
         borderTopEndRadius={"10px"}
       >
         <Text fontSize={"lg"} fontWeight={"semibold"}>
-          Oven Details - {address}
+          Oven Address -<br/> {address}
         </Text>
       </Flex>
 
