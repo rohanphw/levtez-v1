@@ -444,7 +444,7 @@ function App({ connectWallet }) {
         )}
         {current === STATES.CONNECTED && (
           <>
-            <Flex mb='30px'>
+            <Flex mb='5px'>
               <Button
                 colorScheme="blue"
                 variant="solid"
@@ -469,14 +469,14 @@ function App({ connectWallet }) {
               fontSize="3xl"
               fontWeight="bold"
               color="gray.400"
-              marginBottom="6px"
+              marginBottom="2px"
             >
               Go long on your assets{" "}
             </Text>
             <Text color="gray.400" fontSize="l">
               In a long (buy) position, the user/buyer is hoping for the price
               to rise.
-              <br /> An investor in a long position will profit from a rise in
+               An investor in a long position will profit from a rise in
               price
             </Text>
             <SimpleGrid
